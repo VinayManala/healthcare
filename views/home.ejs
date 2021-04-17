@@ -1,0 +1,83 @@
+<%- include("header.html"); %>
+<html>
+<style>
+  .styled-table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.styled-table td, .styled-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.styled-table tr:nth-child(even){background-color: lightskyblue;}
+
+.styled-table tr:hover {background-color: lightseagreen; color: black;}
+
+.styled-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  color: white;
+}
+</style>
+<body>
+    <div class="container-contact100" style="background-image: url('./images/bg-01.jpg');">
+        <div class="wrap-contact100">
+            <header id="header">
+                <div class="container-fluid">
+        
+                    <div id="logo" class="pull-left">
+                        <h1><a href="#intro" class="scrollto">Health Care</a></h1>
+                    </div>
+        
+                    <nav id="nav-menu-container">
+                        <ul class="nav-menu">
+                            <li class="menu-active"><a href="#intro"></a></li>
+                            <li><a href="/help">GET HELP</a></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/create_user">Create User</a></li>
+                            <li><a href="/add_user">New Record</a></li>
+                            <li><a href="/">About Us</a></li>
+                        </ul>
+                    </nav>
+                    <!-- #nav-menu-container -->
+                </div>
+            </header>            
+        </div>
+<div>
+  <h2 class="contact100-form-title">Iot healthcare makes our patient's Living Easier</h2>
+</br>
+  </br>
+<table class="styled-table">
+  <tr>
+    <th>Patient name</th>
+    <th>Devices</th>
+    <th>Patient Type</th>
+  </tr>
+  <% devices.forEach(function(device){ %>
+      <% for(x in device.devices){ %>
+        <tr>
+        <td><a href="/info?name=<%= device.name %>" style="text-decoration: None;color: black;"><%= device.name %></a></td>
+      <td><%= device.devices[x] %></td>
+      <td><%= device.patientype %></td>
+        </tr>
+      <% }%>
+  <% }); %>
+</table>
+
+<!-- <ul>
+    <% devices.forEach(function(device){ %>
+      <% for(x in device.devices){ %>
+        <li><%= device.devices[x] %></li>
+      <% }%>
+    <% }); %>
+  </ul> -->
+</div>
+</div>
+</body>
+</html>
+
+  <%- include("footer.html"); %>

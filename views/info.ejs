@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<%- include("header.html"); %>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+</head>
+<style>
+    .styled-table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .styled-table td, .styled-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .styled-table tr:nth-child(even){background-color: lightskyblue;}
+  
+  .styled-table tr:hover {background-color: lightseagreen; color: black;}
+  
+  .styled-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: white;
+  }
+  </style>
+<body>
+    <div class="container-contact100" style="background-image: url('./images/bg-01.jpg');">
+        <div class="wrap-contact100">
+            <form class="contact100-form">
+                <span class="contact100-form-title">
+                    Patient Details 
+                </span>
+                    <table class="styled-table">
+                        <tr>
+                            <th>Patient name</th>
+                            <th>Patient Id</th>
+                            <th>Devices</th>
+                            <th>Patient Type</th>
+                          </tr>
+                    <td><h3><%= details.name %></h3></td>
+                    <td><h3><%= details._id %></h3></td>
+                    <td><h3><%= details.devices %></h3></td>
+                    <td><h3><%= details.patientype %></h3></td>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<%- include("footer.html"); %>

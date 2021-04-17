@@ -1,0 +1,75 @@
+<%- include("header.html"); %>
+<head>
+	<title>Health Care | Add Record</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+<!--===============================================================================================-->
+</head>
+<!-- <form action="/new" method="POST">
+    <table>
+
+        <tr>
+            <td> Name: </td>
+            <td>
+                <input type="text" placeholder="Enter Name" name="name" required></td>
+        </tr>
+        <tr>
+            <td> Device Name: </td>
+            <td>
+                <input type="text" placeholder="Enter Device " name="devices" required></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit"></td>
+        </tr>
+    </table>
+
+</form> -->
+<!-- ----------------------- -->
+
+<body>
+<div class="container-contact100" style="background-image: url('./images/bg-01.jpg');">
+    <div class="wrap-contact100">
+
+			<form class="contact100-form validate-form" action="/update" method="POST">
+				<span class="contact100-form-title">
+					New Record
+				</span>
+
+				<div class="wrap-input100 rs1-wrap-input100 " >
+					<span class="label-input100">Patient name*</span>
+					<input class="input100" type="text" name="name" placeholder="Enter your name">
+				</div>
+
+				<div class="wrap-input100">
+					<span class="label-input100">Device Name*</span>
+					<input class="input100" type="text" name="devices" placeholder="Device name">
+				</div>
+
+				<div class="wrap-input100">
+					<span class="label-input100">Message</span>
+					<textarea class="input100" name="message" placeholder="Your message here..."></textarea>
+				</div>
+
+					<div class="container-contact100-form-btn">
+						<div class="wrap-contact100-form-btn">
+							<div class="contact100-form-bgbtn"></div>
+								<button id="btn1" href="/header" class="contact100-form-btn" style="float: left;">
+									Submit
+								</button>
+						</div>	
+					</div>
+				</div>
+		  </form>
+		</div>
+
+        <span class="contact100-more">
+            Call us on +91 8888888888
+        </span>
+    </div>
+</div>
+
+</body>
+<%- include("footer.html"); %>
